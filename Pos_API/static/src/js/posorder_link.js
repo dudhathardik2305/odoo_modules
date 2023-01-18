@@ -9,14 +9,10 @@ odoo.define('Pos_API.orderlink', function (require) {
 const Raju = (Order) => class Raju extends Order {
     constructor() {
         super(...arguments);
-        // this.links = this.links || false;
         this.save_to_db();
     }
    
     getCustomerCount(){
-        // var new_link = await this.pos.env.services.rpc({
-        //     model: 'pos.order',method: 'get_links'
-        // })
         return Object.keys(this.pos.validated_orders_name_server_id_map)[0];
     }
 
@@ -29,8 +25,6 @@ const Raju = (Order) => class Raju extends Order {
     //@override
     init_from_JSON(json) {
         super.init_from_JSON(...arguments);
-        // this.links = json.links;
-
     }
     
     //@override
@@ -44,3 +38,4 @@ const Raju = (Order) => class Raju extends Order {
 Registries.Model.extend(Order, Raju);
  
 });
+
