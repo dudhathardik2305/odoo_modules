@@ -10,8 +10,6 @@
 //      	async validateOrder(isForceValidate){
 //      		const order = this.currentOrder;
 //      		const result = await this.env.services.rpc({model:'pos.order', method:'get_links', args:[[]]})
-
-
 //      	}
 //      }
 //      Registries.Component.extend(PaymentScreen, NewPaymentScreen);
