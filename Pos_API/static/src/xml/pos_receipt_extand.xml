@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <templates id="OrderReceipt_template" xml:space="preserve">
+    <t t-name="OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('pos-receipt-contact')]" position="inside">
+            <!-- <t t-if='receipt.links'> -->
+                <div style="font-weight:bold;">Links:
+                    <t t-esc='receipt.links' />
+                </div>
+            <!-- </t> -->
+        </xpath>
+    </t>
+</templates>
